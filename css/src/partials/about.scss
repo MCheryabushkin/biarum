@@ -1,0 +1,46 @@
+.about {
+  padding: 100px 0;
+  text-align: center;
+  .content-wrap {
+    flex-direction: column;
+    align-items: center;
+    max-width: 999px;
+  }
+
+  &__text {
+    margin-bottom: 57px;
+    max-width: 1000px;
+    p {
+      margin-bottom: 30px;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 30px;
+      letter-spacing: 0.2px;
+      font-family: $subFont;
+    }
+  }
+
+  &__video-block {}
+}
+
+
+.about-video {
+ &__video {
+   margin-bottom: 60px;
+ }
+  &__btn {
+    padding: 13px 33px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.26px;
+    color: $white;
+    border: 1px solid $blue;
+    border-radius: 3px;
+    background: $blue;
+
+    &:hover {
+      color: $blue;
+      background: $white;
+    }
+  }
+}

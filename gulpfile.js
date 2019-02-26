@@ -180,7 +180,7 @@ gulp.task('browser-sync', function() {
         }
     });
     // gulp.watch("*.html").on("change", browserSyncReload);
-    // gulp.watch("/css/src/**/*.scss").on("change", browserSyncReload);
+    gulp.watch("/css/src/**/*.scss").on("change", browserSyncReload);
     gulp.watch("/js/src/**/*.js").on("change", browserSyncReload);
 });
 

@@ -1,0 +1,32 @@
+.whyuse {
+  padding: 100px 0;
+  background: $gray-dark;
+
+  .content-wrap {
+    flex-direction: column;
+  }
+
+  &__images {
+    margin: 54px 0 58px;
+    max-width: 700px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__images-item {
+    p {
+      margin-top: 36px;
+      padding-left: 50px;
+      font-size: 26px;
+      font-weight: 600;
+      text-align: center;
+      letter-spacing: 0.26px;
+    }
+  }
+
+  &__text {
+    text-align: center;
+  }
+}

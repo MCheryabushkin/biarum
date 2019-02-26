@@ -1,0 +1,117 @@
+.header {
+  border-bottom: 1px solid $gray;
+
+  &__top {
+    padding: 28px 0;
+    background: $dark-blue;
+  }
+  .content-wrap {
+    justify-content: space-between;
+  }
+
+
+  &__logo {
+    margin-right: 16%;
+    color: $white;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.32px;
+  }
+
+  &__nav {
+    flex: 1;
+  }
+  &__login {
+    color: $white;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.28px;
+  }
+
+  &__banner {
+    padding: 110px 0 120px;
+    background: url("/images/del/banner-bg.png") center no-repeat;
+    background-size: cover;
+    h1 {
+      font-family: $subFont;
+      font-size: 100px;
+      font-weight: 400;
+      line-height: 75px;
+      text-transform: uppercase;
+      color: $white;
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__bot {
+    .content-wrap {
+      justify-content: center;
+      position: relative;
+    }
+  }
+  &__bot-nav {
+    padding: 34px 0 28px;
+  }
+
+  &__get-lorem {
+    padding: 13px 33px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.26px;
+    color: $blue;
+    border: 1px solid $blue;
+    border-radius: 3px;
+    background: $white;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &:hover {
+      color: $white;
+      background: $blue;
+    }
+  }
+}
+
+.header-menu {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  li {
+    a {
+      color: $white;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.32px;
+    }
+  }
+}
+
+.bot-menu {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  li {
+    padding: 0 15px;
+    a {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 40px;
+      letter-spacing: 0.32px;
+      color: $black;
+    }
+
+    &.bot-menu__active {
+      a {
+        color: $blue;
+      }
+    }
+  }
+}
