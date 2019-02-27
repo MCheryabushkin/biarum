@@ -1,6 +1,9 @@
 .whyuse {
-  padding: 100px 0;
+  padding: 60px 0 50px;
   background: $gray-dark;
+  @include respond-to(md) {
+    padding: 100px 0;
+  }
 
   .content-wrap {
     flex-direction: column;
@@ -13,20 +16,54 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: column;
+    @include respond-to(md) {
+      flex-direction: row;
+    }
+
+    &> img {
+      margin-bottom: 30px;
+      @include respond-to(md) {
+        margin-bottom: 0;
+      }
+    }
   }
 
   &__images-item {
+    margin-left: -50px;
+    @include respond-to(md) {
+      margin-left: 0;
+    }
+    &:first-child {
+      margin-bottom: 30px;
+      @include respond-to(md) {
+        margin-bottom: 0;
+      }
+    }
     p {
-      margin-top: 36px;
+      margin-top: 30px;
       padding-left: 50px;
-      font-size: 26px;
-      font-weight: 600;
+      font-size: 20px;
+      font-weight: 700;
       text-align: center;
       letter-spacing: 0.26px;
+      @include respond-to(md) {
+        margin-top: 36px;
+        font-size: 26px;
+        font-weight: 600;
+      }
     }
   }
 
   &__text {
+    margin-bottom: 0;
     text-align: center;
+    font-size: 16px;
+    font-weight: 300;
+    @include respond-to(md) {
+      margin-bottom: 57px;
+      font-size: 20px;
+      font-weight: 400;
+    }
   }
 }

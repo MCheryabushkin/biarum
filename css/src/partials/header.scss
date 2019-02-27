@@ -4,11 +4,19 @@
   &__top {
     padding: 28px 0;
     background: $dark-blue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
   }
   .content-wrap {
-    justify-content: space-between;
+    justify-content: center;
+    position: relative;
+    @include respond-to(md) {
+      justify-content: space-between;
+    }
   }
-
 
   &__logo {
     margin-right: 16%;
@@ -21,32 +29,73 @@
 
   &__nav {
     flex: 1;
+    display: none;
+    @include respond-to(md) {
+      display: block;
+    }
   }
   &__login {
     color: $white;
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 0.28px;
+    display: none;
+    @include respond-to(md) {
+      display: block;
+    }
   }
 
   &__banner {
+    margin-top: 60px;
     padding: 110px 0 120px;
-    background: url("/images/del/banner-bg.png") center no-repeat;
-    background-size: cover;
+    background: url("/images/del/banner-bg.png")  no-repeat;
+    background-position: -980px center;
+    @include respond-to(md) {
+      margin-top: 80px;
+      background-position: center center;
+      background-size: cover;
+    }
     h1 {
-      font-family: $subFont;
-      font-size: 100px;
-      font-weight: 400;
+      font-size: 58px;
+      font-weight: 300;
       line-height: 75px;
       text-transform: uppercase;
       color: $white;
+      font-family: $mainFont;
+      text-align: center;
+      width: 100%;
+      @include respond-to(md) {
+        font-family: $subFont;
+        font-size: 100px;
+        font-weight: 400;
+      }
       span {
-        font-weight: 700;
+        font-weight: 600;
+        @include respond-to(md) {
+          font-weight: 700;
+        }
+      }
+
+      &.h1--desktop {
+        display: none;
+        @include respond-to(md) {
+          display: block;
+        }
+      }
+      &.h1--mobile {
+        display: block;
+        @include respond-to(md) {
+          display: none;
+        }
       }
     }
   }
 
   &__bot {
+    display: none;
+    @include respond-to(md) {
+      display: block;
+    }
     .content-wrap {
       justify-content: center;
       position: relative;
@@ -69,10 +118,74 @@
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+    @include respond-to(md) {
+      right: 20px;
+    }
 
     &:hover {
       color: $white;
       background: $blue;
+    }
+  }
+
+  &__toggle-menu {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    span {
+      display: inline-block;
+      width: 20px;
+      height: 2px;
+      background: $white;
+      position: relative;
+      &:after, &:before {
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 2px;
+        background: $white;
+        position: absolute;
+        left: 0;
+      }
+      &:before {
+        top: -6px;
+      }
+      &:after {
+        top: 6px;
+      }
+    }
+  }
+  &__toggle-submenu {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    span {
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      background: $white;
+      position: relative;
+      border-radius: 50%;
+      &:after, &:before {
+        content: '';
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        background: $white;
+        position: absolute;
+        left: 0;
+        border-radius: 50%;
+      }
+      &:before {
+        top: -8px;
+      }
+      &:after {
+        top: 8px;
+      }
     }
   }
 }
