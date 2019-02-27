@@ -5,34 +5,61 @@
     margin: 0 auto;
     width: 100%;
     max-width: 1100px;
-    background: url("/images/del/rebiew-bg.png") center right no-repeat;
+    background: #f0f0f1;
+    @include respond-to(md) {
+      background: url("/images/del/rebiew-bg.png") center right no-repeat;
+    }
   }
 
   &__body {
-    margin: 120px 0 108px auto;
-    width: 368px;
-  }
+    margin: 0;
+    padding: 28px 0 17px;
+    @include respond-to(sm) {
+      padding: 29px 0;
+      margin: 120px 0 108px auto;
+      width: 368px;
+    }
+  } 
   &__text {
     margin-bottom: 22px;
-    font-size: 24px;
     font-family: $subFont;
     font-weight: 300;
-    letter-spacing: 0.48px;
-    line-height: 34px;
+    font-size: 18px;
+    letter-spacing: 0.36px;
+    line-height: 21px;
+    text-align: center;
+    @include respond-to(md) {
+      font-size: 24px;
+      letter-spacing: 0.48px;
+      line-height: 34px;
+      text-align: left;
+    }
   }
   &__name {
     margin-bottom: 10px;
     font-size: 22px;
     font-weight: 700;
-    letter-spacing: 0.44px;
-    line-height: 24px;
     text-transform: uppercase;
+    letter-spacing: 0.36px;
+    line-height: 18px;
+    text-align: center;
+    @include respond-to(md) {
+      letter-spacing: 0.44px;
+      line-height: 24px;
+      text-align: left;
+    }
   }
   &__prof {
     font-size: 16px;
     font-weight: 300;
-    letter-spacing: 0.32px;
-    line-height: 28px;
+    letter-spacing: 0.36px;
+    line-height: 24px;
+    text-align: center;
+    @include respond-to(md) {
+      text-align: left;
+      letter-spacing: 0.32px;
+      line-height: 28px;
+    }
   }
 }
 

@@ -4,12 +4,19 @@
   .footer-page {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
+    @include respond-to(md) {
+      justify-content: space-between;
+    }
   }
 
   &__nav {
+    display: none;
     width: 48%;
+    @include respond-to(md) {
+      display: block;
+    }
   }
 
   &__contacts {
